@@ -1,0 +1,21 @@
+{
+  "name": "TechZilla",
+  "short_name": "TechZilla",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#ff4500",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://lh3.googleusercontent.com/proxy/9hrrU6lO9U7G1tAfe3cArJoZELtpyioLlYn6UbzFEEvI7fb8pPhC7JKGp0baWRH_Rb2zw3-5OoPifY6FFmtjs8z9ijL6hrdGNV0llDxy-vaN5Jc1cUvi",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

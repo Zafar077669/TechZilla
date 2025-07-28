@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechZilla iPhones</title>
+    <link rel="stylesheet" href="../yagi ayfon/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="manifest" href="../yagi ayfon/manifest.json" />
+    <!DOCTYPE html>
+    <html lang="uz">
+
+    <head>
+        <!-- Primary Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechZilla – Zamonaviy Texnologiyalar Onlayn Do'koni</title>
+        <meta name="title" content="TechZilla – Zamonaviy Texnologiyalar Onlayn Do'koni">
+        <meta name="description"
+            content="TechZilla orqali siz iPhone, iPad, MacBook kabi texnologik mahsulotlarni ishonchli narxlarda sotib olishingiz mumkin. 3D ko‘rinish, AI yordamchi, to‘liq SEO, va haqiqiy to‘lov tizimlari bilan.">
+        <meta name="keywords"
+            content="iPhone, texnologiyalar, onlayn do'kon, Macbook, AI yordamchi, TechZilla, zamonaviy websayt, 3D ko‘rinish, Stripe to‘lov, Payme, Click, premium sayt">
+        <meta name="author" content="TechZilla Team">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://techzilla.com/">
+        <meta property="og:title" content="TechZilla – Zamonaviy Texnologiyalar Do‘koni">
+        <meta property="og:description"
+            content="iPhone va zamonaviy mahsulotlarni 3D ko‘rinish va real to‘lov bilan xarid qiling.">
+        <meta property="og:image" content="https://techzilla.com/images/preview.jpg">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://techzilla.com/">
+        <meta name="twitter:title" content="TechZilla – Zamonaviy Texnologiyalar Do‘koni">
+        <meta name="twitter:description"
+            content="iPhone va zamonaviy mahsulotlarni 3D ko‘rinish va real to‘lov bilan xarid qiling.">
+        <meta name="twitter:image" content="https://techzilla.com/images/preview.jpg">
+
+        <!-- Favicon -->
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+        <!-- JSON-LD Schema.org -->
+        <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "TechZilla",
+    "url": "https://techzilla.com/",
+    "logo": "https://techzilla.com/images/logo.png",
+    "image": "https://techzilla.com/images/preview.jpg",
+    "description": "TechZilla – Zamonaviy texnologik mahsulotlar onlayn do‘koni. 3D ko‘rinish, AI yordamchi, va real to‘lov tizimlari bilan.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Toshkent",
+      "addressCountry": "UZ"
+    },
+    "sameAs": [
+      "https://facebook.com/techzilla",
+      "https://twitter.com/techzilla",
+      "https://instagram.com/techzilla"
+    ]
+  }
+  </script>
+
+        <!-- CSS / Fonts / External Libraries -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    </head>
+
+
+</head>
+
+<body>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker muvaffaqiyatli ro\'yxatdan o\'tdi:', registration);
+                    })
+                    .catch(error => {
+                        console.error('Service Worker ro\'yxatdan o\'tishda xato:', error);
+                    });
+            });
+        }
+    </script>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">TechZilla</div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Qidirish..." />
+            <button onclick="performSearch()">
+                🔍
+            </button>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Bosh sahifa</a></li>
+            <li><a href="#">Mahsulotlar</a></li>
+            <li><a href="#">Profil</a></li>
+        </ul>
+
+        <button id="cartBtn" class="btn-navbar cart-btn">
+            <span class="cart-text">Savat</span> 🛒 <span class="cart-count">3</span>
+        </button>
+
+        <div class="auth-buttons">
+            <button id="loginBtn" class="btn-navbar">Tizimga Kirish</button>
+            <button id="signupBtn" class="btn-navbar">Ro'yxatdan o'tish</button>
+        </div>
+
+        <div class="language-selector premium-lang">
+            <button id="langBtn" class="btn-navbar lang-btn" aria-haspopup="true" aria-expanded="false">
+                🌐 <span class="selected-lang">O‘zbek</span> ▼
+            </button>
+            <div id="langDropdown" class="lang-dropdown hidden" role="menu" aria-label="Til tanlash">
+                <div class="lang-columns">
+                    <ul role="none">
+                        <li role="menuitem" tabindex="0" data-lang="uz">🇺🇿 O‘zbek</li>
+                        <li role="menuitem" tabindex="0" data-lang="en">🇬🇧 English</li>
+                        <li role="menuitem" tabindex="0" data-lang="es">🇪🇸 Spanish</li>
+                        <li role="menuitem" tabindex="0" data-lang="fr">🇫🇷 French</li>
+                        <li role="menuitem" tabindex="0" data-lang="de">🇩🇪 German</li>
+                        <li role="menuitem" tabindex="0" data-lang="zh">🇨🇳 Chinese</li>
+                        <li role="menuitem" tabindex="0" data-lang="ru">🇷🇺 Russian</li>
+                        <li role="menuitem" tabindex="0" data-lang="ar">🇸🇦 Arabic</li>
+                        <li role="menuitem" tabindex="0" data-lang="ja">🇯🇵 Japanese</li>
+                        <li role="menuitem" tabindex="0" data-lang="ko">🇰🇷 Korean</li>
+                        <li role="menuitem" tabindex="0" data-lang="it">🇮🇹 Italian</li>
+                    </ul>
+                    <ul role="none">
+                        <li role="menuitem" tabindex="0" data-lang="pt">🇵🇹 Portuguese</li>
+                        <li role="menuitem" tabindex="0" data-lang="hi">🇮🇳 Hindi</li>
+                        <li role="menuitem" tabindex="0" data-lang="tr">🇹🇷 Turkish</li>
+                        <li role="menuitem" tabindex="0" data-lang="nl">🇳🇱 Dutch</li>
+                        <li role="menuitem" tabindex="0" data-lang="sv">🇸🇪 Swedish</li>
+                        <li role="menuitem" tabindex="0" data-lang="pl">🇵🇱 Polish</li>
+                        <li role="menuitem" tabindex="0" data-lang="vi">🇻🇳 Vietnamese</li>
+                        <li role="menuitem" tabindex="0" data-lang="th">🇹🇭 Thai</li>
+                        <li role="menuitem" tabindex="0" data-lang="he">🇮🇱 Hebrew</li>
+                        <li role="menuitem" tabindex="0" data-lang="bn">🇧🇩 Bengali</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeLoginModal" class="close-btn">&times;</span>
+            <section class="auth-section">
+                <div class="auth-card">
+                    <h2>Kirish</h2>
+                    <form id="modalLoginForm" novalidate>
+                        <div class="input-group">
+                            <input type="email" id="modalLoginEmail" placeholder="Email" required />
+                            <span class="input-icon">@</span>
+                            <small class="error-message"></small>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="modalLoginPassword" placeholder="Parol" required minlength="6" />
+                            <span class="input-icon">🔒</span>
+                            <small class="error-message"></small>
+                        </div>
+                        <button type="submit" class="btn-login">Kirish</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeSignupModal" class="close-btn">&times;</span>
+            <section class="auth-section">
+                <div class="auth-card">
+                    <h2>Ro‘yxatdan o‘tish</h2>
+                    <form id="modalSignupForm" novalidate>
+                        <div class="input-group">
+                            <input type="text" id="modalSignupName" placeholder="Ism Familiya" required minlength="3" />
+                            <span class="input-icon">👤</span>
+                            <small class="error-message"></small>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="modalSignupEmail" placeholder="Email" required />
+                            <span class="input-icon">@</span>
+                            <small class="error-message"></small>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="modalSignupPassword" placeholder="Parol (kamida 6 ta belgidan)"
+                                required minlength="6" />
+                            <span class="input-icon">🔒</span>
+                            <small class="error-message"></small>
+                        </div>
+                        <button type="submit" class="btn-signup">Ro‘yxatdan o‘tish</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="hero-title">iPhone quvvatini his qiling</h2>
+            <p class="hero-subtitle">Ajoyib narxlarda premium smartfonlar.</p>
+            <a href="#products" class="btn-primary">Hoziroq xarid qiling</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Our Featured iPhones</h2>
+            <div class="products-grid">
+                <!-- Product cards will go here -->
+                <div class="product-card">
+                    <img src="images/rasm6.jpg" alt="iPhone 14" />
+                    <h3>iPhone 11 pro max</h3>
+                    <p>$500</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm6.jpg" alt="iPhone 14" />
+                    <h3>iPhone 11 pro max</h3>
+                    <p>$500</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm6.jpg" alt="iPhone 14" />
+                    <h3>iPhone 11 pro max</h3>
+                    <p>$500</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm6.jpg" alt="iPhone 14" />
+                    <h3>iPhone 11 pro max</h3>
+                    <p>$500</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm5.png" alt="iPhone 14" />
+                    <h3>iPhone 12 pro max</h3>
+                    <p>$700</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm5.png" alt="iPhone 14" />
+                    <h3>iPhone 12 pro max</h3>
+                    <p>$700</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm5.png" alt="iPhone 14" />
+                    <h3>iPhone 12 pro max</h3>
+                    <p>$700</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm5.png" alt="iPhone 14" />
+                    <h3>iPhone 12 pro max</h3>
+                    <p>$700</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm4.webp" alt="iPhone 14" />
+                    <h3>iPhone 13 pro max</h3>
+                    <p>$900</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm4.webp" alt="iPhone 14" />
+                    <h3>iPhone 13 pro max</h3>
+                    <p>$900</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm4.webp" alt="iPhone 14" />
+                    <h3>iPhone 13 pro max</h3>
+                    <p>$900</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm4.webp" alt="iPhone 14" />
+                    <h3>iPhone 13 pro max</h3>
+                    <p>$900</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm7.webp" alt="iPhone 14" />
+                    <h3>iPhone 14 pro max</h3>
+                    <p>$1200</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm7.webp" alt="iPhone 14" />
+                    <h3>iPhone 14 pro max</h3>
+                    <p>$1200</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm7.webp" alt="iPhone 14" />
+                    <h3>iPhone 14 pro max</h3>
+                    <p>$1200</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm7.webp" alt="iPhone 14" />
+                    <h3>iPhone 14 pro max</h3>
+                    <p>$1200</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm2.webp" alt="iPhone 15" />
+                    <h3>iPhone 15 pro max</h3>
+                    <p>$1500</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm2.webp" alt="iPhone 15" />
+                    <h3>iPhone 15 pro max</h3>
+                    <p>$1500</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm2.webp" alt="iPhone 15" />
+                    <h3>iPhone 15 pro max</h3>
+                    <p>$1500</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm2.webp" alt="iPhone 15" />
+                    <h3>iPhone 15 pro max</h3>
+                    <p>$1500</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm3.jpg" alt="iPhone 16" />
+                    <h3>iPhone 16 pro max</h3>
+                    <p>$1700</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm3.jpg" alt="iPhone 16" />
+                    <h3>iPhone 16 pro max</h3>
+                    <p>$1700</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm3.jpg" alt="iPhone 16" />
+                    <h3>iPhone 16 pro max</h3>
+                    <p>$1700</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rasm3.jpg" alt="iPhone 16" />
+                    <h3>iPhone 16 pro max</h3>
+                    <p>$1700</p>
+                    <div class="stars">⭐⭐⭐⭐☆</div>
+                    <button class="btn-details">Tafsilotlar</button>
+                    <button class="btn-add-cart">Savatchaga qo'shish</button>
+                    <div class="product-inventory">
+                        <p class="inventory-status">
+                            🔥 <span id="stock-text">So'nggi 3 dona qoldi!</span>
+                        </p>
+                        <div class="inventory-bar">
+                            <div id="inventory-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- More cards to be added... -->
+            </div>
+        </div>
+    </section>
+    <section class="faq-section">
+        <h2 class="faq-title">🔥 Tez-tez so'raladigan savollar</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">📱 iPhone sotib olsam, yetkazib berish muddati qancha?</button>
+                <div class="faq-answer">Odatda 1-3 ish kuni ichida yetkaziladi. Hududingizga qarab farq qilishi mumkin.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">💳 Qanday to‘lov usullari mavjud?</button>
+                <div class="faq-answer">Biz Click, Payme, UzCard, Visa, Mastercard orqali to‘lovlarni qabul qilamiz.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">🔁 Mahsulotni qaytarish mumkinmi?</button>
+                <div class="faq-answer">Ha, 7 kun ichida qaytarish mumkin. Faqat qadoq ochilmagan bo‘lishi shart.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">🌍 Qaysi davlatlarga yetkazib berasiz?</button>
+                <div class="faq-answer">O‘zbekiston, Qozog‘iston, Rossiya, Turkiya va boshqa MDH davlatlariga yetkazib
+                    beramiz.</div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="container contact-container">
+            <h2 class="contact-title">Biz bilan bog'lanish</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Ismingizni kiriting</label>
+                    <input type="text" id="name" placeholder="Ismingizni kiriting" required />
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Elekron pochtangizni kiriting</label>
+                    <input type="email" id="email" placeholder="Elektron pochtangizni kiriting" required />
+                </div>
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment-dots"></i> Xabaringiz</label>
+                    <textarea id="message" rows="5" placeholder="Xabaringizni yozing" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Xabar yuborish</button>
+            </form>
+        </div>
+    </section>
+    <section class="cart-section wow-section">
+        <div class="cart-container">
+            <h2 class="cart-title">🛒 Savatchangiz</h2>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="../yagi ayfon/images/rasm8.jpg" alt="iPhone 14 Pro" class="cart-img">
+                    <div class="cart-details">
+                        <h3>iPhone 14 Pro</h3>
+                        <p>128GB, Space Black</p>
+                        <span class="cart-price">$999</span>
+                    </div>
+                    <div class="cart-actions">
+                        <button class="btn-quantity">-</button>
+                        <span class="quantity">1</span>
+                        <button class="btn-quantity">+</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="../yagi ayfon/images/rasm9.webp" alt="iPhone 13 Mini" class="cart-img">
+                    <div class="cart-details">
+                        <h3>iPhone 13 Mini</h3>
+                        <p>256GB, Blue</p>
+                        <span class="cart-price">$799</span>
+                    </div>
+                    <div class="cart-actions">
+                        <button class="btn-quantity">-</button>
+                        <span class="quantity">2</span>
+                        <button class="btn-quantity">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <h3>Umumiy: <span>$2,597</span></h3>
+                <button class="checkout-btn fire-glow">Buyurtma berish</button>
+            </div>
+        </div>
+    </section>
+    <section class="payment-section">
+        <canvas id="galaxyCanvas" class="galaxy-canvas"></canvas>
+        <h2 class="payment-title">💳 To‘lovni amalga oshiring</h2>
+
+        <div class="payment-methods">
+            <img src="images/icon6.png" alt="Visa" class="method-icon" />
+            <img src="images/icon7.png" alt="MasterCard" class="method-icon" />
+            <img src="images/icon8.jpg" alt="Click" class="method-icon" />
+            <img src="images/icon10.png" alt="Payme" class="method-icon" />
+        </div>
+
+        <form class="payment-form">
+            <input type="text" placeholder="Karta egasi ismi" required />
+            <input type="text" placeholder="Karta raqami" required />
+            <div class="card-details">
+                <input type="text" placeholder="MM/YY" required />
+                <input type="text" placeholder="CVV" required />
+            </div>
+            <input type="email" placeholder="Email manzilingiz" required />
+            <button type="submit" class="pay-now-btn">To‘lovni amalga oshirish</button>
+        </form>
+
+        <div class="payment-summary">
+            <p>Jami: <strong>2.597$</strong></p>
+        </div>
+    </section>
+
+    <section class="payment-section">
+        <h2>To'lov usullarimiz</h2>
+        <p>Saytimizda xavfsiz va qulay to‘lov turlarini tanlang:</p>
+        <div class="payment-methods">
+            <label>
+                <input type="radio" name="payment" value="visa" checked>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" />
+            </label>
+            <label>
+                <input type="radio" name="payment" value="mastercard">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="MasterCard" />
+            </label>
+            <label>
+                <input type="radio" name="payment" value="amex">
+                <img src="images/rasm11.png" alt="American Express" />
+            </label>
+            <label>
+                <input type="radio" name="payment" value="paypal">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" />
+            </label>
+            <label>
+                <input type="radio" name="payment" value="applepay">
+                <img src="images/rasm10.png" alt="Apple Pay" />
+            </label>
+            <label>
+                <input type="radio" name="payment" value="googlepay">
+                <img src="images/rasm12.png" alt="Google Pay" />
+            </label>
+        </div>
+    </section>
+    <section class="profile-section">
+        <div class="profile-card">
+            <div class="avatar-container" tabindex="0" aria-label="Foydalanuvchi rasmi">
+                <img src="https://i.pravatar.cc/150?img=12" alt="Foydalanuvchi rasmi" class="avatar" />
+                <button class="edit-avatar-btn" aria-label="Rasmni o‘zgartirish">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" fill="#fff" viewBox="0 0 24 24" width="24">
+                        <path
+                            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM21.41 6.34a1.25 1.25 0 0 0 0-1.77l-2-2a1.25 1.25 0 0 0-1.77 0l-1.83 1.83 3.75 3.75 1.85-1.81z" />
+                    </svg>
+                </button>
+                <div class="glow-anim"></div>
+            </div>
+            <div class="profile-info">
+                <h2>Ism Familiya</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <h4>Email</h4>
+                        <p>user@example.com</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Telefon</h4>
+                        <p>+998 930437995</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Manzil</h4>
+                        <p>Toshkent, O'zbekiston</p>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="edit-profile-btn">Profilni tahrirlash</button>
+                    <button class="logout-btn">Chiqish</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials-section">
+        <h2 class="section-title">💬 Mijozlarimiz fikri</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-card">
+                <p>“iPhone 14 Pro ni TechZilla saytidan oldim — yetkazib berish tez, mahsulot esa original! 👍”</p>
+                <h4>- Dilshod, Toshkent</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>“Dizayni va xizmat ko‘rsatish sifati ajoyib. Ishonchli sayt!”</p>
+                <h4>- Madina, Samarqand</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>“Boshqa joyda bunday narx va xizmatni topmadim. Zo‘r!”</p>
+                <h4>- Kamron, Andijon</h4>
+            </div>
+        </div>
+    </section>
+    <section class="countdown-offer">
+        <h2>🕒 Chegirma tugashiga:</h2>
+        <div class="countdown-timer" id="countdown">
+            <div><span id="days">00</span><small>kun</small></div>
+            <div><span id="hours">00</span><small>soat</small></div>
+            <div><span id="minutes">00</span><small>daqiqa</small></div>
+            <div><span id="seconds">00</span><small>soniya</small></div>
+        </div>
+    </section>
+
+    <script>
+        const targetDate = new Date("2025-06-10T00:00:00").getTime();
+
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = d;
+            document.getElementById("hours").innerText = h;
+            document.getElementById("minutes").innerText = m;
+            document.getElementById("seconds").innerText = s;
+        }, 1000);
+    </script>
+    <section class="stats-section">
+        <div class="stat-box">
+            <h3 class="stat-num" data-target="5000">0</h3>
+            <p>🔋 Sotilgan iPhone</p>
+        </div>
+        <div class="stat-box">
+            <h3 class="stat-num" data-target="1200">0</h3>
+            <p>😎 Mamnun mijoz</p>
+        </div>
+        <div class="stat-box">
+            <h3 class="stat-num" data-target="10">0</h3>
+            <p>🏆 Yillik tajriba</p>
+        </div>
+    </section>
+    <script>
+        // Mahsulotdagi ombor soni
+        const stockLeft = 3;
+
+        const stockText = document.getElementById("stock-text");
+        const inventoryFill = document.getElementById("inventory-fill");
+
+        if (stockLeft <= 3) {
+            stockText.textContent = `So'nggi ${stockLeft} dona qoldi!`;
+            inventoryFill.style.width = `${stockLeft * 10 + 10}%`;
+            inventoryFill.style.background = "linear-gradient(90deg, red, orange)";
+        } else if (stockLeft <= 10) {
+            stockText.textContent = `${stockLeft} dona mavjud`;
+            inventoryFill.style.width = `${stockLeft * 10}%`;
+            inventoryFill.style.background = "linear-gradient(90deg, yellow, green)";
+        } else {
+            stockText.textContent = "Omborda yetarli";
+            inventoryFill.style.width = "100%";
+            inventoryFill.style.background = "green";
+        }
+    </script>
+
+
+    <script>
+        const counters = document.querySelectorAll('.stat-num');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / 200;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    </script>
+    <script>
+        document.querySelectorAll(".faq-question").forEach(button => {
+            button.addEventListener("click", () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle("active");
+            });
+        });
+    </script>
+
+
+
+
+    <!-- 🔥 Location Section -->
+    <section class="location-section">
+        <h2 class="location-title">📍 Bizning joylashuvimiz</h2>
+        <div class="glow-map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47934.81453221244!2d69.24007336869888!3d41.29949579204627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b265b68e0a1%3A0xf676408986e18d44!2sTashkent!5e0!3m2!1sen!2s!4v1716838499487!5m2!1sen!2s"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- 🔥 Fire Animation Background for Footer -->
+    <div class="footer-fire-animation"></div>
+
+    <!-- 🔥 Floating flame particles -->
+    <div class="fire-particle"></div>
+    <div class="fire-particle"></div>
+    <div class="fire-particle"></div>
+    <div class="fire-particle"></div>
+    <div class="fire-particle"></div>
+
+    <footer class="fire-footer">
+        <div class="footer-container">
+            <h2 class="footer-title">Biz bilan bog'laning</h2>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://t.me/yourchannel" class="icon" title="Telegram" target="_blank">
+                    <img src="images/icon1.webp" alt="Telegram" />
+                </a>
+                <a href="https://instagram.com/yourprofile" class="icon" title="Instagram" target="_blank">
+                    <img src="images/icon2.avif" alt="Instagram" />
+                </a>
+                <a href="https://facebook.com/yourpage" class="icon" title="Facebook" target="_blank">
+                    <img src="images/icon3.avif" alt="Facebook" />
+                </a>
+                <a href="https://wa.me/998901234567" class="icon" title="WhatsApp" target="_blank">
+                    <img src="images/icon4.png" alt="WhatsApp" />
+                </a>
+                <a href="https://twitter.com/yourhandle" class="icon" title="Twitter" target="_blank">
+                    <img src="images/icon5.htm" alt="Twitter" />
+                </a>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <a href="tel:+998930437995" class="phone-number">📞 +998 90 123 45 67</a> <br />
+                <a href="mailto:info@example.com" class="email-address">📧 info@example.com</a> <br />
+                <a href="https://maps.google.com/?q=Tashkent" class="map-link" target="_blank">📍 Manzil: Toshkent,
+                    O‘zbekiston</a>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="lang-select">
+                <label for="lang">🌐 Tilni tanlang:</label>
+                <select id="lang" name="lang">
+                    <option value="uz">O‘zbek</option>
+                    <option value="en">English</option>
+                    <option value="ru">Русский</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="es">Español</option>
+                    <option value="it">Italiano</option>
+                    <option value="zh">中文</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="newsletter">
+                <p>📬 Yangiliklardan xabardor bo‘ling:</p>
+                <input type="email" placeholder="Emailingizni kiriting" />
+                <button>Obuna bo‘lish</button>
+            </div>
+
+            <p class="copyright">© 2025 TechZilla Company. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- 🔥 Back to Top Button -->
+    <button id="backToTop" title="Back to Top">
+        <span class="flame"></span>
+        ⬆
+    </button>
+    <!-- 🔥 WhatsApp Chat -->
+    <div class="live-chat-button whatsapp-chat">
+        <a href="https://wa.me/998901234567" target="_blank" title="WhatsApp orqali bog‘lanish">
+            <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp" />
+        </a>
+    </div>
+
+    <!-- 🔥 Telegram Chat -->
+    <div class="live-chat-button telegram-chat">
+        <a href="https://t.me/yourusername" target="_blank" title="Telegram orqali bog‘lanish">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" />
+        </a>
+    </div>
+
+    <!-- 🔥 Custom Chat Modal Trigger -->
+    <div class="live-chat-button custom-chat" onclick="toggleChatModal()">
+        <img src="https://cdn-icons-png.flaticon.com/512/893/893257.png" alt="Live Chat" title="Sayt orqali yozish" />
+    </div>
+
+    <!-- 🔥 Custom Chat Modal Box -->
+    <div class="chat-modal" id="chatModal">
+        <div class="chat-header">
+            <span>💬 Jonli Suhbat</span>
+            <button onclick="toggleChatModal()">✖</button>
+        </div>
+        <div class="chat-body">
+            <p>Salom! Savolingiz bormi? Biz sizga yordam beramiz.</p>
+            <input type="text" placeholder="Ismingiz" />
+            <textarea placeholder="Savolingizni yozing..."></textarea>
+            <button class="send-button">Yuborish</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleChatModal() {
+            const chat = document.getElementById("chatModal");
+            if (chat.style.display === "flex") {
+                chat.style.display = "none";
+            } else {
+                chat.style.display = "flex";
+            }
+        }
+    </script>
+
+
+    <script>
+        // Avatar tasvirini almashtirish uchun oddiy dialog
+        document.querySelector('.edit-avatar-btn').addEventListener('click', () => {
+            const url = prompt('Yangi avatar rasmi URL manzilini kiriting:');
+            if (url) {
+                document.querySelector('.avatar').src = url;
+            }
+        });
+    </script>
+    <script>
+        // Tugmani faqat pastga tushilganda ko‘rsatish
+        window.onscroll = function () {
+            const btn = document.getElementById("backToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        // Yuqoriga silliq skroll
+        document.getElementById("backToTop").addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+    <!-- Modal (hidden by default) -->
+    <div id="product-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- JS orqali to‘ldiriladi -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Section (popup or side panel) -->
+    <div id="cart-panel" class="cart hidden">
+        <h3>Your Cart</h3>
+        <ul id="cart-items"></ul>
+        <div class="cart-total">Total: $<span id="cart-total">0</span></div>
+        <button class="btn-checkout">Checkout</button>
+    </div>
+
+    <!-- Footer -->
+    <script>
+        function performSearch() {
+            const query = document.getElementById("searchInput").value.trim();
+            if (query) {
+                alert(`Siz qidirdingiz: "${query}"`);
+                // Yoki sahifani boshqa URL ga yo'naltirish: window.location.href = `/search?q=${query}`;
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
